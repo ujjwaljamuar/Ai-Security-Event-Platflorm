@@ -1,0 +1,58 @@
+plan.md
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Local database and data
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# Terraform
+terraform/.terraform/
+terraform/**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.tfvars
+!*.tfvars.example
+crash.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+</CodeBlock>
+
+The Terraform lockfile, `terraform.lock.hcl`, should be committed when we initialize Terraform. It pins provider selections and is not a secret.
+
+## Step 8: Run Phase 0 verification
+
+First, ensure these empty package files exist:
+
+```text
+app/__init__.py
+app/common/__init__.py

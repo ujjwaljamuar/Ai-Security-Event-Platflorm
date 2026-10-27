@@ -1,0 +1,18 @@
+uv init --bare
+uv python pin 3.12
+uv add "pydantic>=2.10,<3" "pydantic-settings>=2.7,<3"
+uv add --dev pytest pytest-cov ruff mypy
+
+
+uv run pytest
+uv run ruff check .
+uv run ruff format --check .
+
+
+uv run python -m app.producer.main --count 20
+
+uv run pytest tests/unit/test_checkpoints.py -v
+uv run ruff check app tests
+uv run ruff format app tests
+
+

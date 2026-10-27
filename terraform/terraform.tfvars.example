@@ -1,0 +1,6 @@
+aws_region      = "ap-south-1"
+project_name    = "ai-security-event-platform"
+environment     = "dev"
+stream_name     = "security-events-dev"
+retention_hours = 24
+shard_count     = 1
