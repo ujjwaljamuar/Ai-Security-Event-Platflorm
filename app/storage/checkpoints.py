@@ -162,3 +162,42 @@ class CheckpointStore:
             return connection.execute(
                 "SELECT COUNT(*) FROM rejected_records"
             ).fetchone()[0]
+
+
+def reset_stale_checkpoints(database_path: str) -> int:
+    """
+    Delete saved Kinesis shard checkpoints after a stream is recreated.
+
+    Preserves consumed events, rejected records, alerts, and audit history.
+
+    Returns:
+        Number of checkpoint records deleted.
+    """
+    connection = sqlite3.connect(database_path, timeout=10)
+
+    try:
+        connection.execute("PRAGMA busy_timeout = 10000")
+        connection.execute("BEGIN IMMEDIATE")
+
+        cursor = connection.execute("DELETE FROM shard_checkpoints")
+        deleted_count = cursor.rowcount
+
+        connection.commit()
+        return deleted_count
+
+    except Exception:
+        connection.rollback()
+        raise
+
+    finally:
+        connection.close()
+
+
+if __name__ == "__main__":
+    from app.common.config import Settings
+
+    config = Settings()
+
+    deleted = reset_stale_checkpoints(config.sqlite_path)
+
+    print(f"Reset complete. Deleted {deleted} shard checkpoint(s).")

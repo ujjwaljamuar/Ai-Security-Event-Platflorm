@@ -29,3 +29,6 @@ class Settings(BaseSettings):
 @lru_cache
 def get_settings() -> Settings:
     return Settings()
+
+
+sqlite_path: str = "data/security_events.db"
