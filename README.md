@@ -732,6 +732,14 @@ Prometheus supports metric collection and query-based monitoring, while Grafana 
 - [ ] Add CI checks for tests, linting, type checking, and dependency security.
 - [ ] Document production deployment and incident-response procedures.
 
+## 🎥 Project Demo
+
+Watch the full walkthrough of the AI-Assisted Security Event Detection Platform:
+
+[![AI-Assisted Security Event Detection Platform](https://res.cloudinary.com/dgoardsdr/image/upload/AI-Assisted_Security_Event_Detection_Platform_sb8tl6.png)](https://www.youtube.com/watch?v=ZLklQB3kGtU)
+
+**[▶ Watch the full demo](https://www.youtube.com/watch?v=ZLklQB3kGtU)**
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
