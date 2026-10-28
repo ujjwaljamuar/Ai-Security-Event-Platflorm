@@ -734,4 +734,4 @@ Prometheus supports metric collection and query-based monitoring, while Grafana 
 
 ## License
 
-No license has been specified yet. Add a `LICENSE` file before distributing or accepting external contributions. Until a license is added, do not assume that others have permission to reuse, modify, or redistribute the code.
+This project is licensed under the [MIT License](LICENSE).
