@@ -736,7 +736,7 @@ Prometheus supports metric collection and query-based monitoring, while Grafana 
 
 Watch the full walkthrough of the AI-Assisted Security Event Detection Platform:
 
-[![AI-Assisted Security Event Detection Platform](https://res.cloudinary.com/dgoardsdr/image/upload/AI-Assisted_Security_Event_Detection_Platform_sb8tl6.png)](https://www.youtube.com/watch?v=ZLklQB3kGtU)
+[![AI-Assisted Security Event Detection Platform](https://res.cloudinary.com/dgoardsdr/image/upload/f_webp/AI-Assisted_Security_Event_Detection_Platform_sb8tl6.png)](https://www.youtube.com/watch?v=ZLklQB3kGtU)
 
 **[▶ Watch the full demo](https://www.youtube.com/watch?v=ZLklQB3kGtU)**
 
